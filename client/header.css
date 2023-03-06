@@ -36,10 +36,12 @@ body {
   color: var(--text-primary);
 }
 
-header {
+header{
   position: fixed;
   width: 100%;
-  margin-top: -125px;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid var(--text-secondary);
 }
 
 .topnav {
@@ -49,7 +51,6 @@ header {
   padding: 15px;
   display: flex;
   align-items: center;
-  /* box-shadow: var(--background-darkest) 0px 15px 15px 15px; */
 }
 
 .topnav a img {
@@ -75,10 +76,12 @@ header {
   text-decoration: none;
   font-size: 20px;
   transition: color 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .topnav a:hover {
   color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
 .topnav a.active {
@@ -134,6 +137,15 @@ header {
   transition: border-color 0.3s 0.1s;
   margin: 10px;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.solde:hover,
+.solde-exchange:hover,
+.account:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .solde:hover {
@@ -228,7 +240,7 @@ header {
   border: 2px solid var(--accent-primary);
   position: relative;
   user-select: none;
-  transition: border-color 0.3s 0.1s;
+  transition: border-color 0.3s 0.3s;
   margin: 10px;
   cursor: pointer;
   justify-content: center;
@@ -253,6 +265,11 @@ header {
 .account .user svg {
   transform: rotate(90deg);
   scale: 2;
+}
+
+.account .guest svg,
+.account .user svg {
+  animation-delay: 0.5s;
 }
 
 .account:hover .guest svg,

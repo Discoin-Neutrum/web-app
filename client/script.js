@@ -50,7 +50,7 @@ function buildSlider() {
             "<div class='slideOverlay'>" +
             "<h1>" + slideArray[i].title + "</h1>" +
             "<h4>" + slideArray[i].subtitle + "</h4>" +
-            "<a href='" + slideArray[i].link + `' target='_blank'>En savoir plus <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="white" d="M12 5l7 7-7 7V5z"/></svg></a>` +
+            "<a href='" + slideArray[i].link + `'>En savoir plus <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="white" d="M12 5l7 7-7 7V5z"/></svg></a>` +
             "</div>" +
             "</div>";
 
